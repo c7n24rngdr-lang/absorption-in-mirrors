@@ -12,10 +12,10 @@ This review covers all code cells in `new-wave-vibe.ipynb`, `new-wave-bragg.ipyn
 
 Let z be depth into the mirror, theta the grazing angle, and lambda the vacuum wavelength. Distinguish three quantities:
 
-\[
+```math
  k_0=2\pi/\lambda,\qquad k_\perp=k_0\sin\theta,
  \qquad Q=2k_\perp=(4\pi/\lambda)\sin\theta.
-\]
+```
 
 The notebooks' argument `q` is **k_perp**, whereas the reflectometry momentum transfer in the papers' plots is **Q**. [D], §2.2, p. 6 explicitly defines its `q_z` as `(4*pi/lambda)*sin(theta)`. A factor-of-two error here moves every cutoff and absorption normalization.
 
@@ -23,10 +23,10 @@ Lengths in the optical calculation are angstroms. The `.npy` profiles contain **
 
 The nuclear scattering-length density (SLD) is written
 
-\[
+```math
  \rho=\rho'-i\rho''_a,\quad\rho''_a\ge0,\qquad
  U=\frac{2\pi\hbar^2}{m_n}\rho.
-\]
+```
 
 Here rho is SLD, while [K] uses rho for **atomic number density**. Thus [K]'s `rho*b_c` corresponds to our real SLD. Notebook SLD columns must be multiplied by `1e-6` to obtain angstrom^-2.
 
@@ -34,19 +34,19 @@ Here rho is SLD, while [K] uses rho for **atomic number density**. Thus [K]'s `r
 
 A neutron is coherently scattered by nuclei throughout each material. At grazing incidence its small normal kinetic energy is comparable to the effective nuclear optical potential, even though its total kinetic energy is much larger. Translational invariance parallel to flat interfaces allows the lateral plane wave to be factored out ([K], Eq. 8). The normal wave then satisfies
 
-\[
+```math
  \psi_j''+k_j^2\psi_j=0,\qquad
  k_j^2=k_\perp^2-4\pi(\rho'_j-\rho'_0)+i4\pi\rho''_{a,j}.
-\]
+```
 
 This is [K], Eqs. 9 and 11, with diffuse attenuation set to zero and a possible nonzero, nonabsorbing incident-medium SLD included by subtraction. For the forward-wave convention `exp(+i*k_j*z)`, choose `Im(k_j)>=0`. In an absorbing medium the wave decays into the material; reversing the absorption sign would create unphysical gain. Below a positive real potential, the lossless wave is evanescent rather than propagating.
 
 At a sharp interface, continuity of psi and psi' gives amplitude coefficients
 
-\[
+```math
  r_{ij}=\frac{k_i-k_j}{k_i+k_j},\qquad
  t_{ij}=\frac{2k_i}{k_i+k_j},\qquad r_{ji}=-r_{ij}.
-\]
+```
 
 These follow from [K], Eq. 12 and appear in [A], Eqs. 59, 61, and 67. **Amplitude coefficients are not probabilities.** Transmission probability needs a velocity/normal-current ratio.
 
@@ -56,10 +56,10 @@ A supermirror grades the layer thicknesses. Different depths reflect different n
 
 The conventional nominal m value specifies
 
-\[
+```math
  m=Q_{\max}/Q_{c,\rm Ni}=k_{\perp,\max}/k_{c,\rm Ni},\qquad
  k_{c,\rm Ni}=\sqrt{4\pi\rho'_{\rm Ni}}.
-\]
+```
 
 Equivalently, `sin(theta_max)=m*sin(theta_c,Ni)` at fixed wavelength; the often-used `theta_max≈m*theta_c,Ni` is a small-angle approximation. m alone does not define a unique structure or guarantee a particular reflectivity threshold. It remains referenced to Ni even when another high-SLD material is used.
 
@@ -74,12 +74,12 @@ These are float64 arrays in the example profile's three-column format. Their SLD
 
 For pair j=0,...,N-1, the explicit design rule is
 
-\[
+```math
  s_j=\left[1.02^4+\frac{j}{N-1}\big((m+0.2)^4-1.02^4\big)\right]^{1/4},
  \quad
  d_{j,a}=\frac{\pi}{2\sqrt{(s_jk_{c,\rm Ni})^2-4\pi\rho'_a}},
  \quad a\in\{\mathrm{Ni,Ti}\}.
-\]
+```
 
 Thicknesses from this expression are in angstroms and are divided by 10 for storage. The fourth-power grading allocates more bilayers to the higher-momentum region where interface reflection is weak. The upper padding of 0.2 places the last local Bragg centre beyond the nominal usable edge. Parameters and counts were selected using calculated broadband reflectivity, not just the location of a Bragg peak.
 
@@ -112,25 +112,25 @@ By contrast, the supplied periodic Ni/Ti m=3 file gives R≈0.99855 at m_coordin
 
 [K], Eq. 10 expresses the field in a layer measured from its left boundary:
 
-\[
+```math
  \psi_j(x)=\alpha_j e^{ik_jx}+\beta_j e^{-ik_jx},\quad 0\le x\le d_j.
-\]
+```
 
 The notebooks use an equivalent and more stable convention:
 
-\[
+```math
  \psi_j(x)=A_j e^{ik_jx}+B_j e^{ik_j(d_j-x)},\qquad
  A_j=\alpha_j,\quad \beta_j=B_j e^{ik_jd_j}.
-\]
+```
 
 Thus `B_right` is referenced to the **right** interface. Substituting it directly for the left-referenced beta in a paper's formula would be wrong. Both exponential factors used inside a finite passive layer have modulus at most one, avoiding the exponentially growing factors that make a long transfer-matrix product unstable.
 
 Let `p_j=exp(i*k_j*d_j)` and let E_j be reflection from the remaining stack at the right boundary of layer j. The backward recursion uses the load `l_j=p_(j+1)^2*E_(j+1)`:
 
-\[
+```math
  E_j=r_{j,j+1}+\frac{t_{j,j+1}t_{j+1,j}\,l_j}{1-r_{j+1,j}l_j}
      =\frac{r_{j,j+1}+l_j}{1+r_{j,j+1}l_j}.
-\]
+```
 
 It ends at the substrate interface, with no incoming substrate wave. The forward pass reconstructs A and B from the transmission factors and these loads. This is the scalar multiple-reflection composition of [A], Eqs. 7–10 and 55–58, algebraically equivalent to the boundary matrices in [K], Eqs. 12–14. A finite coating has incident amplitude 1, reflected amplitude r, and only an outgoing/decaying substrate wave.
 
@@ -140,35 +140,35 @@ The density `|psi|^2` contains interference between forward and backward waves. 
 
 The unambiguous starting point is the normal probability current:
 
-\[
+```math
  J_z=\frac{\hbar}{2i m_n}(\psi^*\psi'-\psi\psi'^*)
      =\frac{\hbar}{m_n}\operatorname{Im}(\psi^*\psi').
-\]
+```
 
 For unit incident amplitude in a nonabsorbing incident medium,
 
-\[
+```math
  J_{\rm in}=\frac{\hbar k_\perp}{m_n},\qquad
  R=|r|^2,\qquad
  T=\frac{\operatorname{Re}k_s}{k_\perp}|A_s|^2.
-\]
+```
 
 These are [K], Eqs. 15, 18, and 19. T is the current **entering the substrate**, not the fraction emerging from the far side of a finite substrate. Subsequent capture in semi-infinite Si is not coating capture.
 
 Using the wave equation gives
 
-\[
+```math
  \frac{d}{dz}\operatorname{Im}(\psi^*\psi')
        =-4\pi\rho''_a|\psi|^2.
-\]
+```
 
 Consequently the capture probability per incident neutron in finite layer j is
 
-\[
+```math
  \boxed{P_j=\frac{4\pi\rho''_{a,j}}{k_\perp}
                  \int_{z_j}^{z_{j+1}}|\psi(z)|^2\,dz}
        =\frac{J_z(z_j)-J_z(z_{j+1})}{J_{\rm in}}.
-\]
+```
 
 This derives the notebook's `4*pi*1e-6*im_sld*integral/k_inc` and agrees with [K], Eq. 20 when all optical loss is capture. It is dimensionless: `(angstrom^-2)*(angstrom)/(angstrom^-1)=1`. Every layer uses the same **incident normal wavevector** in the denominator. Replacing it by a local complex k_j, its magnitude, or the total wavevector gives a different normalization.
 
@@ -176,18 +176,18 @@ This derives the notebook's `4*pi*1e-6*im_sld*integral/k_inc` and agrees with [K
 
 For a microscopic capture cross section, the optical theorem ([K], Eq. 4; [A], text following Eq. 49) gives
 
-\[
+```math
  \rho''_a=N b''=\frac{N\sigma_a(\lambda)}{2\lambda},
  \qquad 4\pi\rho''_a=k_0\Sigma_a(\lambda),\quad\Sigma_a=N\sigma_a.
-\]
+```
 
 In vacuum incidence, the probability coefficient is consequently `Sigma_a/sin(theta)`, not simply `Sigma_a`. The weak-absorption, approximately uniform-density limit gives `P≈Sigma_a*d/sin(theta)`, the expected longer path at grazing incidence. At fixed k_perp, approximate 1/v capture makes `sigma_a/lambda`, hence rho''_a, nearly wavelength-independent. The code's use of wavelength only for plotting angle is consistent with this capture-only approximation, not with a full wavelength-dependent diffuse-loss model.
 
 [K], Eqs. 3, 7, 9, and 11 include **diffuse scattering in addition to capture**. If the imaginary optical potential includes several removal processes, layer current loss L_j is their sum. Capture in component C must then use [K], Eq. 21:
 
-\[
+```math
  P_{a,C,j}=L_j\frac{\Sigma_{a,C}}{\Sigma_a+\Sigma_d}.
-\]
+```
 
 A capture SLD must not be confused with an incoherent SLD returned by a materials library. In the present model `R+T+sum(P_j)=1`. With additional losses, the corresponding diffuse terms must be added. Also distinguish probability per incident neutron from probability conditional on not being reflected, `P_capture/(1-R)` ([K], §5). The notebooks calculate the former.
 
@@ -195,11 +195,11 @@ A capture SLD must not be confused with an incoherent SLD returned by a material
 
 For the opposite-boundary amplitudes, write k=a+ib with b>=0. Direct integration gives
 
-\[
+```math
  I_j=(|A|^2+|B|^2)\frac{1-e^{-2bd}}{2b}
        +2\operatorname{Re}(AB^*)e^{-bd}\,d\,
              \operatorname{sinc}(ad/\pi),
-\]
+```
 
 where `sinc(x)=sin(pi*x)/(pi*x)`, and the first quotient tends to d at b=0. The cross term follows from integrating `exp(i*a*(2*x-d))`; its imaginary odd part cancels. The factors in `integrate_layers_analytic` are correct, including `torch.sinc(k.real*d/pi)`. `expm1` avoids subtracting almost equal numbers when absorption is small.
 
