@@ -1,0 +1,35 @@
+{
+  "source": "periodictable 2.1.0 neutron_sld; wavelength=2.4 angstrom",
+  "materials": {
+    "Ni": {
+      "density_g_cm3": 8.902,
+      "real_micro_A_inverse_squared": 9.407764749850172,
+      "capture_micro_A_inverse_squared": 0.0011404490352502582,
+      "incoherent_micro_A_inverse_squared": 5.857600025107903
+    },
+    "Ti": {
+      "density_g_cm3": 4.54,
+      "real_micro_A_inverse_squared": -1.9248657571990726,
+      "capture_micro_A_inverse_squared": 0.0009673155188374778,
+      "incoherent_micro_A_inverse_squared": 2.7546653121422144
+    },
+    "Cr": {
+      "density_g_cm3": 7.19,
+      "real_micro_A_inverse_squared": 3.027007086187118,
+      "capture_micro_A_inverse_squared": 0.0007062999552361183,
+      "incoherent_micro_A_inverse_squared": 3.177455277858989
+    },
+    "Si": {
+      "density_g_cm3": 2.33,
+      "real_micro_A_inverse_squared": 2.0737423003838087,
+      "capture_micro_A_inverse_squared": 2.3757942260997373e-05,
+      "incoherent_micro_A_inverse_squared": 0.06328438148515064
+    },
+    "Be": {
+      "density_g_cm3": 1.848,
+      "real_micro_A_inverse_squared": 9.619673240959697,
+      "capture_micro_A_inverse_squared": 2.6098573593856852e-06,
+      "incoherent_micro_A_inverse_squared": 0.2260555597530991
+    }
+  }
+}

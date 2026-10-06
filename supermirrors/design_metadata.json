@@ -1,0 +1,102 @@
+{
+  "model": "capture only, bulk nuclear SLD, sharp interfaces, vacuum/Ni-Ti/Si",
+  "algorithm": "fourth-power chirp of quarter-wave bilayers; s_min=1.02, s_max=m+0.2",
+  "kc_Ni_A_inverse": 0.010872969166668378,
+  "Qc_Ni_A_inverse": 0.021745938333336757,
+  "columns": [
+    "bilayer_1_based",
+    "d_Ni_nm",
+    "d_Ti_nm"
+  ],
+  "order": "incident surface to substrate; each pair is Ni then Ti",
+  "SLD_A_inverse_squared": {
+    "air": {
+      "real": 0.0,
+      "absorption": -0.0
+    },
+    "Ni": {
+      "real": 9.407764749850172e-06,
+      "absorption": 1.1404490352502582e-09
+    },
+    "Ti": {
+      "real": -1.9248657571990724e-06,
+      "absorption": 9.673155188374777e-10
+    },
+    "Si": {
+      "real": 2.0737423003838087e-06,
+      "absorption": 2.3757942260997373e-11
+    },
+    "Be": {
+      "real": 9.62e-06,
+      "absorption": 2.6e-12
+    }
+  },
+  "designs": {
+    "3": {
+      "file": "Ni_Ti_supermirror_m3.npy",
+      "bilayers": 300,
+      "finite_layers": 600,
+      "total_thickness_um": 3.811026137044366,
+      "thickness_range_nm": {
+        "Ni": [
+          4.752648930613872,
+          71.87552633725943
+        ],
+        "Ti": [
+          4.470187424148986,
+          12.94751304412821
+        ]
+      },
+      "validation_points": 24001,
+      "validated_m_range": [
+        0.02,
+        3
+      ],
+      "required_minimum_R": 0.9,
+      "minimum_R": 0.9400562874186568,
+      "m_at_minimum_R": 2.9222716666666666,
+      "R_at_nominal_m": 0.9474985267579128,
+      "Q_nominal_A_inverse": 0.06523781500001027,
+      "checks": {
+        "flux_balance": 3.228528555609955e-13,
+        "layer_current_vs_integral": 3.051866485220822e-15,
+        "psi_continuity": 1.897149936107019e-15,
+        "derivative_continuity": 7.016522229951154e-17,
+        "independent_reflectivity": 3.019806626980426e-14
+      }
+    },
+    "5": {
+      "file": "Ni_Ti_supermirror_m5.npy",
+      "bilayers": 1600,
+      "finite_layers": 3200,
+      "total_thickness_um": 12.116181388076136,
+      "thickness_range_nm": {
+        "Ni": [
+          2.8310740605980036,
+          71.87552633725943
+        ],
+        "Ti": [
+          2.7677793902273775,
+          12.94751304412821
+        ]
+      },
+      "validation_points": 24001,
+      "validated_m_range": [
+        0.02,
+        5
+      ],
+      "required_minimum_R": 0.85,
+      "minimum_R": 0.8653083566305165,
+      "m_at_minimum_R": 4.9894175,
+      "R_at_nominal_m": 0.9212302235234088,
+      "Q_nominal_A_inverse": 0.10872969166668378,
+      "checks": {
+        "flux_balance": 1.396660564978447e-12,
+        "layer_current_vs_integral": 2.5608990839379175e-15,
+        "psi_continuity": 1.831026719408895e-15,
+        "derivative_continuity": 1.1123893155135927e-16,
+        "independent_reflectivity": 5.395683899678261e-14
+      }
+    }
+  }
+}

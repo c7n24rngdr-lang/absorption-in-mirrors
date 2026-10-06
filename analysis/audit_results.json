@@ -1,0 +1,370 @@
+{
+  "independent_checks": {
+    "neutron_fields_configurable.ipynb": {
+      "absorbing": {
+        "amplitude_vs_boundary_matrix": 6.069846772046872e-16,
+        "transmission_vs_boundary_matrix": 2.220446049250313e-15,
+        "field_vs_boundary_matrix": 2.886579864025407e-15,
+        "integral_vs_Gauss_quadrature_A": 1.4210854715202004e-13,
+        "R+T+L_integral-1": 1.7763568394002505e-15,
+        "R+T+L_current-1": 1.7763568394002505e-15,
+        "L_current-L_integral": 7.359428821560043e-16,
+        "L_layer_current-L_layer_integral": 6.293996899185694e-16,
+        "jump_psi": 4.965068306494546e-16,
+        "jump_dpsi": 2.7758963540648015e-17,
+        "jump_normalized_current": 1.1102230246251565e-15
+      },
+      "lossless": {
+        "amplitude_vs_boundary_matrix": 5.525032997054198e-16,
+        "transmission_vs_boundary_matrix": 1.9984014443252818e-15,
+        "field_vs_boundary_matrix": 3.552713678800501e-15,
+        "integral_vs_Gauss_quadrature_A": 1.7053025658242404e-13,
+        "R+T+L_integral-1": 1.1102230246251565e-15,
+        "R+T+L_current-1": 1.1102230246251565e-15,
+        "L_current-L_integral": 9.992007221626409e-16,
+        "L_layer_current-L_layer_integral": 4.440892098500626e-16,
+        "jump_psi": 5.117875266520903e-16,
+        "jump_dpsi": 2.083474391183281e-17,
+        "jump_normalized_current": 7.771561172376096e-16
+      },
+      "nonzero_incident": {
+        "amplitude_vs_boundary_matrix": 6.069846772046872e-16,
+        "transmission_vs_boundary_matrix": 2.220446049250313e-15,
+        "field_vs_boundary_matrix": 2.886579864025407e-15,
+        "integral_vs_Gauss_quadrature_A": 1.4210854715202004e-13,
+        "R+T+L_integral-1": 1.7763568394002505e-15,
+        "R+T+L_current-1": 1.7763568394002505e-15,
+        "L_current-L_integral": 7.359428821560043e-16,
+        "L_layer_current-L_layer_integral": 6.293996899185694e-16,
+        "jump_psi": 4.965068306494546e-16,
+        "jump_dpsi": 2.7758963540648015e-17,
+        "jump_normalized_current": 1.1102230246251565e-15
+      },
+      "single_interface": {
+        "amplitude_vs_boundary_matrix": 2.8319360745321445e-16,
+        "transmission_vs_boundary_matrix": 8.881784197001252e-16,
+        "field_vs_boundary_matrix": 0.0,
+        "integral_vs_Gauss_quadrature_A": 0.0,
+        "R+T+L_integral-1": 4.440892098500626e-16,
+        "R+T+L_current-1": 4.440892098500626e-16,
+        "L_current-L_integral": 0.0,
+        "L_layer_current-L_layer_integral": 0.0,
+        "jump_psi": 2.220446049250329e-16,
+        "jump_dpsi": 6.938893903907278e-18,
+        "jump_normalized_current": 5.551115123125783e-16
+      },
+      "uniform_vacuum": {
+        "amplitude_vs_boundary_matrix": 2.4825341532472736e-16,
+        "transmission_vs_boundary_matrix": 1.3322676295501878e-15,
+        "field_vs_boundary_matrix": 2.220446049250313e-15,
+        "integral_vs_Gauss_quadrature_A": 7.815970093361102e-14,
+        "R+T+L_integral-1": 1.5543122344752192e-15,
+        "R+T+L_current-1": 1.5543122344752192e-15,
+        "L_current-L_integral": 4.440892098500626e-16,
+        "L_layer_current-L_layer_integral": 4.440892098500626e-16,
+        "jump_psi": 1.5700924586837752e-16,
+        "jump_dpsi": 9.813077866773595e-18,
+        "jump_normalized_current": 5.551115123125783e-16
+      },
+      "strong_absorber": {
+        "amplitude_vs_boundary_matrix": 3.420642561924089e-16,
+        "transmission_vs_boundary_matrix": 1.4432899320127035e-15,
+        "field_vs_boundary_matrix": 2.220446049250313e-15,
+        "integral_vs_Gauss_quadrature_A": 1.9895196601282805e-13,
+        "R+T+L_integral-1": 7.771561172376096e-16,
+        "R+T+L_current-1": 8.881784197001252e-16,
+        "L_current-L_integral": 4.3021142204224816e-16,
+        "L_layer_current-L_layer_integral": 4.3021142204224816e-16,
+        "jump_psi": 4.47545209131181e-16,
+        "jump_dpsi": 1.3878026033786178e-17,
+        "jump_normalized_current": 7.771561172376096e-16
+      },
+      "configurable_structure_and_direct_solver": "passed",
+      "known_exact_critical_limit": {
+        "reference_R": 0.2093851141392934,
+        "reference_T": 0.7906148858607064,
+        "notebook_R": 1.0,
+        "notebook_T": 0.0,
+        "note": "Two-exponential basis degenerates; eps is not the analytic limit."
+      }
+    },
+    "new-wave-bragg.ipynb": {
+      "absorbing": {
+        "amplitude_vs_boundary_matrix": 6.069846772046872e-16,
+        "transmission_vs_boundary_matrix": 2.220446049250313e-15,
+        "field_vs_boundary_matrix": 2.886579864025407e-15,
+        "integral_vs_Gauss_quadrature_A": 1.4210854715202004e-13,
+        "R+T+L_integral-1": 1.7763568394002505e-15,
+        "R+T+L_current-1": 1.7763568394002505e-15,
+        "L_current-L_integral": 7.359428821560043e-16,
+        "L_layer_current-L_layer_integral": 6.293996899185694e-16,
+        "jump_psi": 4.965068306494546e-16,
+        "jump_dpsi": 2.7758963540648015e-17,
+        "jump_normalized_current": 1.1102230246251565e-15
+      },
+      "lossless": {
+        "amplitude_vs_boundary_matrix": 5.525032997054198e-16,
+        "transmission_vs_boundary_matrix": 1.9984014443252818e-15,
+        "field_vs_boundary_matrix": 3.552713678800501e-15,
+        "integral_vs_Gauss_quadrature_A": 1.7053025658242404e-13,
+        "R+T+L_integral-1": 1.1102230246251565e-15,
+        "R+T+L_current-1": 1.1102230246251565e-15,
+        "L_current-L_integral": 9.992007221626409e-16,
+        "L_layer_current-L_layer_integral": 4.440892098500626e-16,
+        "jump_psi": 5.117875266520903e-16,
+        "jump_dpsi": 2.083474391183281e-17,
+        "jump_normalized_current": 7.771561172376096e-16
+      },
+      "nonzero_incident": {
+        "amplitude_vs_boundary_matrix": 6.069846772046872e-16,
+        "transmission_vs_boundary_matrix": 2.220446049250313e-15,
+        "field_vs_boundary_matrix": 2.886579864025407e-15,
+        "integral_vs_Gauss_quadrature_A": 1.4210854715202004e-13,
+        "R+T+L_integral-1": 1.7763568394002505e-15,
+        "R+T+L_current-1": 1.7763568394002505e-15,
+        "L_current-L_integral": 7.359428821560043e-16,
+        "L_layer_current-L_layer_integral": 6.293996899185694e-16,
+        "jump_psi": 4.965068306494546e-16,
+        "jump_dpsi": 2.7758963540648015e-17,
+        "jump_normalized_current": 1.1102230246251565e-15
+      },
+      "single_interface": {
+        "amplitude_vs_boundary_matrix": 2.8319360745321445e-16,
+        "transmission_vs_boundary_matrix": 8.881784197001252e-16,
+        "field_vs_boundary_matrix": 0.0,
+        "integral_vs_Gauss_quadrature_A": 0.0,
+        "R+T+L_integral-1": 4.440892098500626e-16,
+        "R+T+L_current-1": 4.440892098500626e-16,
+        "L_current-L_integral": 0.0,
+        "L_layer_current-L_layer_integral": 0.0,
+        "jump_psi": 2.220446049250329e-16,
+        "jump_dpsi": 6.938893903907278e-18,
+        "jump_normalized_current": 5.551115123125783e-16
+      },
+      "uniform_vacuum": {
+        "amplitude_vs_boundary_matrix": 2.4825341532472736e-16,
+        "transmission_vs_boundary_matrix": 1.3322676295501878e-15,
+        "field_vs_boundary_matrix": 2.220446049250313e-15,
+        "integral_vs_Gauss_quadrature_A": 7.815970093361102e-14,
+        "R+T+L_integral-1": 1.5543122344752192e-15,
+        "R+T+L_current-1": 1.5543122344752192e-15,
+        "L_current-L_integral": 4.440892098500626e-16,
+        "L_layer_current-L_layer_integral": 4.440892098500626e-16,
+        "jump_psi": 1.5700924586837752e-16,
+        "jump_dpsi": 9.813077866773595e-18,
+        "jump_normalized_current": 5.551115123125783e-16
+      },
+      "strong_absorber": {
+        "amplitude_vs_boundary_matrix": 3.420642561924089e-16,
+        "transmission_vs_boundary_matrix": 1.4432899320127035e-15,
+        "field_vs_boundary_matrix": 2.220446049250313e-15,
+        "integral_vs_Gauss_quadrature_A": 1.9895196601282805e-13,
+        "R+T+L_integral-1": 7.771561172376096e-16,
+        "R+T+L_current-1": 8.881784197001252e-16,
+        "L_current-L_integral": 4.3021142204224816e-16,
+        "L_layer_current-L_layer_integral": 4.3021142204224816e-16,
+        "jump_psi": 4.47545209131181e-16,
+        "jump_dpsi": 1.3878026033786178e-17,
+        "jump_normalized_current": 7.771561172376096e-16
+      },
+      "quadrature_absorption_wrapper": "passed",
+      "known_exact_critical_limit": {
+        "reference_R": 0.2093851141392934,
+        "reference_T": 0.7906148858607064,
+        "notebook_R": 1.0,
+        "notebook_T": 0.0,
+        "note": "Two-exponential basis degenerates; eps is not the analytic limit."
+      }
+    },
+    "new-wave-vibe.ipynb": {
+      "absorbing": {
+        "amplitude_vs_boundary_matrix": 6.069846772046872e-16,
+        "transmission_vs_boundary_matrix": 2.220446049250313e-15,
+        "field_vs_boundary_matrix": 2.886579864025407e-15,
+        "integral_vs_Gauss_quadrature_A": 1.4210854715202004e-13,
+        "R+T+L_integral-1": 1.7763568394002505e-15,
+        "R+T+L_current-1": 1.7763568394002505e-15,
+        "L_current-L_integral": 7.359428821560043e-16,
+        "L_layer_current-L_layer_integral": 6.293996899185694e-16,
+        "jump_psi": 4.965068306494546e-16,
+        "jump_dpsi": 2.7758963540648015e-17,
+        "jump_normalized_current": 1.1102230246251565e-15
+      },
+      "lossless": {
+        "amplitude_vs_boundary_matrix": 5.525032997054198e-16,
+        "transmission_vs_boundary_matrix": 1.9984014443252818e-15,
+        "field_vs_boundary_matrix": 3.552713678800501e-15,
+        "integral_vs_Gauss_quadrature_A": 1.7053025658242404e-13,
+        "R+T+L_integral-1": 1.1102230246251565e-15,
+        "R+T+L_current-1": 1.1102230246251565e-15,
+        "L_current-L_integral": 9.992007221626409e-16,
+        "L_layer_current-L_layer_integral": 4.440892098500626e-16,
+        "jump_psi": 5.117875266520903e-16,
+        "jump_dpsi": 2.083474391183281e-17,
+        "jump_normalized_current": 7.771561172376096e-16
+      },
+      "nonzero_incident": {
+        "amplitude_vs_boundary_matrix": 6.069846772046872e-16,
+        "transmission_vs_boundary_matrix": 2.220446049250313e-15,
+        "field_vs_boundary_matrix": 2.886579864025407e-15,
+        "integral_vs_Gauss_quadrature_A": 1.4210854715202004e-13,
+        "R+T+L_integral-1": 1.7763568394002505e-15,
+        "R+T+L_current-1": 1.7763568394002505e-15,
+        "L_current-L_integral": 7.359428821560043e-16,
+        "L_layer_current-L_layer_integral": 6.293996899185694e-16,
+        "jump_psi": 4.965068306494546e-16,
+        "jump_dpsi": 2.7758963540648015e-17,
+        "jump_normalized_current": 1.1102230246251565e-15
+      },
+      "single_interface": {
+        "amplitude_vs_boundary_matrix": 2.8319360745321445e-16,
+        "transmission_vs_boundary_matrix": 8.881784197001252e-16,
+        "field_vs_boundary_matrix": 0.0,
+        "integral_vs_Gauss_quadrature_A": 0.0,
+        "R+T+L_integral-1": 4.440892098500626e-16,
+        "R+T+L_current-1": 4.440892098500626e-16,
+        "L_current-L_integral": 0.0,
+        "L_layer_current-L_layer_integral": 0.0,
+        "jump_psi": 2.220446049250329e-16,
+        "jump_dpsi": 6.938893903907278e-18,
+        "jump_normalized_current": 5.551115123125783e-16
+      },
+      "uniform_vacuum": {
+        "amplitude_vs_boundary_matrix": 2.4825341532472736e-16,
+        "transmission_vs_boundary_matrix": 1.3322676295501878e-15,
+        "field_vs_boundary_matrix": 2.220446049250313e-15,
+        "integral_vs_Gauss_quadrature_A": 7.815970093361102e-14,
+        "R+T+L_integral-1": 1.5543122344752192e-15,
+        "R+T+L_current-1": 1.5543122344752192e-15,
+        "L_current-L_integral": 4.440892098500626e-16,
+        "L_layer_current-L_layer_integral": 4.440892098500626e-16,
+        "jump_psi": 1.5700924586837752e-16,
+        "jump_dpsi": 9.813077866773595e-18,
+        "jump_normalized_current": 5.551115123125783e-16
+      },
+      "strong_absorber": {
+        "amplitude_vs_boundary_matrix": 3.420642561924089e-16,
+        "transmission_vs_boundary_matrix": 1.4432899320127035e-15,
+        "field_vs_boundary_matrix": 2.220446049250313e-15,
+        "integral_vs_Gauss_quadrature_A": 1.9895196601282805e-13,
+        "R+T+L_integral-1": 7.771561172376096e-16,
+        "R+T+L_current-1": 8.881784197001252e-16,
+        "L_current-L_integral": 4.3021142204224816e-16,
+        "L_layer_current-L_layer_integral": 4.3021142204224816e-16,
+        "jump_psi": 4.47545209131181e-16,
+        "jump_dpsi": 1.3878026033786178e-17,
+        "jump_normalized_current": 7.771561172376096e-16
+      },
+      "quadrature_absorption_wrapper": "passed",
+      "known_exact_critical_limit": {
+        "reference_R": 0.2093851141392934,
+        "reference_T": 0.7906148858607064,
+        "notebook_R": 1.0,
+        "notebook_T": 0.0,
+        "note": "Two-exponential basis degenerates; eps is not the analytic limit."
+      }
+    }
+  },
+  "supplied_profiles": {
+    "Be_Ti_m3_60_bilayers.npy": {
+      "assumed_material": "Be/Ti",
+      "pairs": 60,
+      "thickness_um": 0.5925946228138697,
+      "periodic": true,
+      "R_at_m": {
+        "1.5": 0.017591738675936636,
+        "2": 0.007131974423362067,
+        "2.5": 0.032798287266438075,
+        "3": 0.9990307809005345,
+        "4": 5.398857867806008e-05,
+        "5": 3.651109654732728e-05
+      }
+    },
+    "Be_Ti_m5_90_bilayers.npy": {
+      "assumed_material": "Be/Ti",
+      "pairs": 90,
+      "thickness_um": 0.5245075885022528,
+      "periodic": true,
+      "R_at_m": {
+        "1.5": 0.011227410030661843,
+        "2": 0.003739628360515322,
+        "2.5": 0.0009898054180546042,
+        "3": 0.0006184194635975158,
+        "4": 0.0027589694631645983,
+        "5": 0.9561552041847788
+      }
+    },
+    "Ni_Ti_m3_60_bilayers.npy": {
+      "assumed_material": "Ni/Ti",
+      "pairs": 60,
+      "thickness_um": 0.5921620992443482,
+      "periodic": true,
+      "R_at_m": {
+        "1.5": 0.011410347867920615,
+        "2": 0.0049492014555704645,
+        "2.5": 0.030983462996812143,
+        "3": 0.9985481920080833,
+        "4": 9.56381781306797e-05,
+        "5": 4.325245684828247e-05
+      }
+    },
+    "Ni_Ti_m5_90_bilayers.npy": {
+      "assumed_material": "Ni/Ti",
+      "pairs": 90,
+      "thickness_um": 0.5243829057298095,
+      "periodic": true,
+      "R_at_m": {
+        "1.5": 0.009502920797273605,
+        "2": 0.004088815617983527,
+        "2.5": 0.0006835869122586326,
+        "3": 0.0007421325168812195,
+        "4": 0.0025735093634229275,
+        "5": 0.9520911921080579
+      }
+    },
+    "profile_data_GRB.npy": {
+      "assumed_material": "Ni/Ti",
+      "pairs": 274,
+      "thickness_um": 3.8204687419948655,
+      "periodic": false,
+      "R_at_m": {
+        "1.5": 0.9916174102898095,
+        "2": 0.9803932219113364,
+        "2.5": 0.9807250537858346,
+        "3": 0.860621151901283,
+        "4": 0.06685508047581236,
+        "5": 0.035470568333164365
+      },
+      "first_R_below_90_percent_above_m1": 2.9718933333333335
+    }
+  },
+  "source_sha256": {
+    "neutron_fields_configurable.ipynb": "e71a499b6ee55884c9b4f67640265bea1e19b3a116c65c83742c64643da7b083",
+    "new-wave-bragg.ipynb": "8ceb35cf1e811ff8cf0deda7d73fd5e4822638fc19d906b15b2f00373676a9cc",
+    "new-wave-vibe.ipynb": "91563dc9041163742ea9a02d27f57eedc36e398a126e68b4639657972c267576"
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "torch": "2.8.0+cpu"
+  },
+  "notebook_execution": {
+    "neutron_fields_configurable.ipynb": {
+      "executed_cells": 5,
+      "status": "passed",
+      "output_directory": "/tmp/neutron_fields_configurable-njwxhyl7",
+      "text_outputs": "182\nFalse\n\n\nair / Ni 100 \u00c5 / Ti 700 \u00c5 / Ni 500 \u00c5 / Si\nmax R = 0.9999810134; max T = 0.9992945984\nR+T: 0.9734409459 ... 0.9999810134\nL: 1.898659047e-05 ... 0.02655905412\nmax |R+T+L_integral-1| = 6.217e-15\nmax |R+T+L_current-1| = 7.438e-15\nmax |L_current-L_integral| = 5.346e-15\nmax |L_layer_current-L_layer_integral| = 4.427e-15\nmax |jump_psi| = 3.000e-15\nmax |jump_dpsi| = 2.082e-17\nmax |jump_normalized_current| = 5.392e-15\n\u0425\u0443\u0434\u0448\u0430\u044f \u0442\u043e\u0447\u043a\u0430 \u043f\u043e\u043b\u043d\u043e\u0433\u043e \u0431\u0430\u043b\u0430\u043d\u0441\u0430: k_perp = 0.004971976647 \u00c5^-1\n\nstructure_01: max |\u03c8|\u00b2=23.5513, k=0.00504654 \u00c5^-1, z=221 \u00c5\n"
+    },
+    "new-wave-bragg.ipynb": {
+      "executed_cells": 9,
+      "status": "passed",
+      "output_directory": "/tmp/new-wave-bragg-e9mt375s",
+      "text_outputs": "\u041f\u0430\u0440 Ni/Ti: 60; \u043a\u043e\u043d\u0435\u0447\u043d\u044b\u0445 \u0441\u043b\u043e\u0451\u0432: 120\n\u041f\u0435\u0440\u0432\u044b\u0439 Ni: 51.148607 \u00c5\n\u0422\u043e\u043b\u0449\u0438\u043d\u0430 \u043f\u043e\u043a\u0440\u044b\u0442\u0438\u044f: 5925.946228 \u00c5 (0.592595 \u043c\u043a\u043c)\n\n\n\u0421\u0443\u043f\u0435\u0440\u0437\u0435\u0440\u043a\u0430\u043b\u043e \u0441 \u043f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435\u043c\nmax R = 0.9999817916; max T = 0.999205356\nR+T: 0.9243906696 ... 0.9999817916\nL: 1.820838506e-05 ... 0.07560933038\nmax |R+T+L_integral-1| = 5.294e-13\nmax |R+T+L_current-1| = 3.931e-13\nmax |L_current-L_integral| = 1.362e-13\nmax |L_layer_current-L_layer_integral| = 6.649e-15\nmax |jump_psi| = 7.341e-15\nmax |jump_dpsi| = 4.510e-17\nmax |jump_normalized_current| = 8.327e-15\n\u0425\u0443\u0434\u0448\u0430\u044f \u0442\u043e\u0447\u043a\u0430 \u043f\u043e\u043b\u043d\u043e\u0433\u043e \u0431\u0430\u043b\u0430\u043d\u0441\u0430: k_perp = 0.0109979996 \u00c5^-1\nmin Re(k): 0.0\nmin Im(k): 0.0\nmax |p|: 1.0\n\n\n\u0422\u0430 \u0436\u0435 \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430 \u0431\u0435\u0437 \u043f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u044f\nmax R = 1; max T = 0.9999996661\nR+T: 1 ... 1\nL: 0 ... 0\nmax |R+T+L_integral-1| = 1.830e-13\nmax |R+T+L_current-1| = 1.794e-13\nmax |L_current-L_integral| = 9.648e-14\nmax |L_layer_current-L_layer_integral| = 6.217e-15\nmax |jump_psi| = 6.916e-15\nmax |jump_dpsi| = 3.496e-17\nmax |jump_normalized_current| = 5.884e-15\n\u0425\u0443\u0434\u0448\u0430\u044f \u0442\u043e\u0447\u043a\u0430 \u043f\u043e\u043b\u043d\u043e\u0433\u043e \u0431\u0430\u043b\u0430\u043d\u0441\u0430: k_perp = 0.01100780156 \u00c5^-1\nmax |R+T-1| \u0431\u0435\u0437 \u043f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u044f = 1.830e-13\n\n\u041a\u0430\u0440\u0442\u0430 |psi|\u00b2: (1000, 4000); \u043c\u0430\u043a\u0441\u0438\u043c\u0443\u043c \u043d\u0430 \u0441\u0435\u0442\u043a\u0435: 18.8576\n\nabsorption.shape (\u0441\u043b\u043e\u0438, k): (120, 5000)\n\u041f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u043f\u043e\u043a\u0440\u044b\u0442\u0438\u044f: 1.8208385e-05 ... 0.07560933\nmax |\u043f\u043e\u0441\u043b\u043e\u0439\u043d\u043e\u0435 \u043f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u2212 \u043f\u043e\u0442\u0435\u0440\u0438 \u043f\u043e \u0442\u043e\u043a\u0430\u043c| = 6.649e-15\nmax |R+T+sum(P_j)-1| = 5.294e-13\n\u0422\u0440\u0430\u043f\u0435\u0446\u0438\u0438, \u0441\u0435\u0442\u043a\u0430 4000 \u0442\u043e\u0447\u0435\u043a z: max |P_grid\u2212P_exact| = 5.444e-08\n\u0422\u0440\u0430\u043f\u0435\u0446\u0438\u0438: max |R+T+sum(P_grid)-1| = 1.564e-06\n"
+    },
+    "new-wave-vibe.ipynb": {
+      "executed_cells": 9,
+      "status": "passed",
+      "output_directory": "/tmp/new-wave-vibe-h4ophcmh",
+      "text_outputs": "\u041f\u0430\u0440 Ni/Ti: 274; \u043a\u043e\u043d\u0435\u0447\u043d\u044b\u0445 \u0441\u043b\u043e\u0451\u0432: 548\n\u041f\u0435\u0440\u0432\u044b\u0439 Ni: 1220.861003 \u00c5\n\u0422\u043e\u043b\u0449\u0438\u043d\u0430 \u043f\u043e\u043a\u0440\u044b\u0442\u0438\u044f: 38204.687420 \u00c5 (3.820469 \u043c\u043a\u043c)\n\n\n\u0421\u0443\u043f\u0435\u0440\u0437\u0435\u0440\u043a\u0430\u043b\u043e \u0441 \u043f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435\u043c\nmax R = 0.9999981013; max T = 0.9950533193\nR+T: 0.9760191467 ... 0.9999981013\nL: 1.898741203e-06 ... 0.02398085328\nmax |R+T+L_integral-1| = 5.262e-13\nmax |R+T+L_current-1| = 5.245e-13\nmax |L_current-L_integral| = 2.208e-14\nmax |L_layer_current-L_layer_integral| = 3.668e-15\nmax |jump_psi| = 1.790e-15\nmax |jump_dpsi| = 5.722e-17\nmax |jump_normalized_current| = 6.948e-15\n\u0425\u0443\u0434\u0448\u0430\u044f \u0442\u043e\u0447\u043a\u0430 \u043f\u043e\u043b\u043d\u043e\u0433\u043e \u0431\u0430\u043b\u0430\u043d\u0441\u0430: k_perp = 0.03235647129 \u00c5^-1\nmin Re(k): 0.0\nmin Im(k): 0.0\nmax |p|: 1.0\n\n\n\u0422\u0430 \u0436\u0435 \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430 \u0431\u0435\u0437 \u043f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u044f\nmax R = 1; max T = 0.9999851344\nR+T: 1 ... 1\nL: 0 ... 0\nmax |R+T+L_integral-1| = 6.103e-13\nmax |R+T+L_current-1| = 6.076e-13\nmax |L_current-L_integral| = 2.029e-14\nmax |L_layer_current-L_layer_integral| = 3.608e-15\nmax |jump_psi| = 1.610e-15\nmax |jump_dpsi| = 4.820e-17\nmax |jump_normalized_current| = 6.948e-15\n\u0425\u0443\u0434\u0448\u0430\u044f \u0442\u043e\u0447\u043a\u0430 \u043f\u043e\u043b\u043d\u043e\u0433\u043e \u0431\u0430\u043b\u0430\u043d\u0441\u0430: k_perp = 0.03147429486 \u00c5^-1\nmax |R+T-1| \u0431\u0435\u0437 \u043f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u044f = 6.103e-13\n\n\u041a\u0430\u0440\u0442\u0430 |psi|\u00b2: (1000, 4000); \u043c\u0430\u043a\u0441\u0438\u043c\u0443\u043c \u043d\u0430 \u0441\u0435\u0442\u043a\u0435: 76.5992\n\nabsorption.shape (\u0441\u043b\u043e\u0438, k): (548, 5000)\n\u041f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u043f\u043e\u043a\u0440\u044b\u0442\u0438\u044f: 1.8987412e-06 ... 0.023980853\nmax |\u043f\u043e\u0441\u043b\u043e\u0439\u043d\u043e\u0435 \u043f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u2212 \u043f\u043e\u0442\u0435\u0440\u0438 \u043f\u043e \u0442\u043e\u043a\u0430\u043c| = 3.668e-15\nmax |R+T+sum(P_j)-1| = 5.262e-13\n\u0422\u0440\u0430\u043f\u0435\u0446\u0438\u0438, \u0441\u0435\u0442\u043a\u0430 4000 \u0442\u043e\u0447\u0435\u043a z: max |P_grid\u2212P_exact| = 4.777e-06\n\u0422\u0440\u0430\u043f\u0435\u0446\u0438\u0438: max |R+T+sum(P_grid)-1| = 6.674e-05\n"
+    }
+  }
+}
