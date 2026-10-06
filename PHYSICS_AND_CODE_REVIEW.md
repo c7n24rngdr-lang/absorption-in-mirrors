@@ -142,20 +142,23 @@ Replace `\operatorname{...}` with `\mathrm{...}`. Here are both corrected sectio
 ## 5. Absorption and the normalization issue
 
 The unambiguous starting point is the normal probability current:
-
+text = r"""
 $$
-J_z = \frac{\hbar}{2 i m_n}
+J_z =
+\frac{\hbar}{2 i m_n}
 \left(
-\overline{\psi}\frac{d\psi}{dz}
+\psi^{*}\frac{d\psi}{dz}
 -
-\psi\frac{d\overline{\psi}}{dz}
+\psi\frac{d\psi^{*}}{dz}
 \right)
 =
-\frac{\hbar}{m_n}\mathrm{Im}
+\frac{\hbar}{m_n}
+\operatorname{Im}
 \left(
-\overline{\psi}\frac{d\psi}{dz}
+\psi^{*}\frac{d\psi}{dz}
 \right).
 $$
+"""
 
 For unit incident amplitude in a nonabsorbing incident medium,
 
