@@ -136,39 +136,44 @@ It ends at the substrate interface, with no incoming substrate wave. The forward
 
 The density `|psi|^2` contains interference between forward and backward waves. It can exceed one locally; it is a density enhancement relative to the incident wave, not a reflection or absorption probability. Standing-wave antinodes increase the capture rate in absorptive layers; nodes suppress it. [A], Eqs. 11–19 and §4 explain this mechanism and resonant enhancement. For a simple lossless cavity the round-trip phase condition is `2*k_i*L_i+phi_1+phi_2=2*pi*n`; a graded supermirror contains many coupled interfaces and must be solved as a whole.
 
+Replace `\operatorname{...}` with `\mathrm{...}`. Here are both corrected sections, ready to copy:
+
+
 ## 5. Absorption and the normalization issue
 
 The unambiguous starting point is the normal probability current:
 
-```math
- J_z=\frac{\hbar}{2i m_n}(\psi^*\psi'-\psi\psi'^*)
-     =\frac{\hbar}{m_n}\operatorname{Im}(\psi^*\psi').
-```
+$$
+J_z=\frac{\hbar}{2i m_n}\left(\psi^*\psi'-\psi(\psi')^*\right)
+=\frac{\hbar}{m_n}\mathrm{Im}\left(\psi^*\psi'\right).
+$$
 
 For unit incident amplitude in a nonabsorbing incident medium,
 
-```math
- J_{\rm in}=\frac{\hbar k_\perp}{m_n},\qquad
- R=|r|^2,\qquad
- T=\frac{\operatorname{Re}k_s}{k_\perp}|A_s|^2.
-```
+$$
+J_{\mathrm{in}}=\frac{\hbar k_\perp}{m_n},\qquad
+R=|r|^2,\qquad
+T=\frac{\mathrm{Re}(k_s)}{k_\perp}|A_s|^2.
+$$
 
 These are [K], Eqs. 15, 18, and 19. T is the current **entering the substrate**, not the fraction emerging from the far side of a finite substrate. Subsequent capture in semi-infinite Si is not coating capture.
 
 Using the wave equation gives
 
-```math
- \frac{d}{dz}\operatorname{Im}(\psi^*\psi')
-       =-4\pi\rho''_a|\psi|^2.
-```
+$$
+\frac{d}{dz}\mathrm{Im}\left(\psi^*\psi'\right)
+=-4\pi\rho''_a|\psi|^2.
+$$
 
 Consequently the capture probability per incident neutron in finite layer j is
 
-```math
- \boxed{P_j=\frac{4\pi\rho''_{a,j}}{k_\perp}
-                 \int_{z_j}^{z_{j+1}}|\psi(z)|^2\,dz}
-       =\frac{J_z(z_j)-J_z(z_{j+1})}{J_{\rm in}}.
-```
+$$
+\boxed{
+P_j=\frac{4\pi\rho''_{a,j}}{k_\perp}
+\int_{z_j}^{z_{j+1}}|\psi(z)|^2\,dz
+}
+=\frac{J_z(z_j)-J_z(z_{j+1})}{J_{\mathrm{in}}}.
+$$
 
 This derives the notebook's `4*pi*1e-6*im_sld*integral/k_inc` and agrees with [K], Eq. 20 when all optical loss is capture. It is dimensionless: `(angstrom^-2)*(angstrom)/(angstrom^-1)=1`. Every layer uses the same **incident normal wavevector** in the denominator. Replacing it by a local complex k_j, its magnitude, or the total wavevector gives a different normalization.
 
@@ -176,18 +181,21 @@ This derives the notebook's `4*pi*1e-6*im_sld*integral/k_inc` and agrees with [K
 
 For a microscopic capture cross section, the optical theorem ([K], Eq. 4; [A], text following Eq. 49) gives
 
-```math
- \rho''_a=N b''=\frac{N\sigma_a(\lambda)}{2\lambda},
- \qquad 4\pi\rho''_a=k_0\Sigma_a(\lambda),\quad\Sigma_a=N\sigma_a.
-```
+$$
+\rho''_a=N b''=\frac{N\sigma_a(\lambda)}{2\lambda},
+\qquad
+4\pi\rho''_a=k_0\Sigma_a(\lambda),
+\qquad
+\Sigma_a=N\sigma_a.
+$$
 
 In vacuum incidence, the probability coefficient is consequently `Sigma_a/sin(theta)`, not simply `Sigma_a`. The weak-absorption, approximately uniform-density limit gives `P≈Sigma_a*d/sin(theta)`, the expected longer path at grazing incidence. At fixed k_perp, approximate 1/v capture makes `sigma_a/lambda`, hence rho''_a, nearly wavelength-independent. The code's use of wavelength only for plotting angle is consistent with this capture-only approximation, not with a full wavelength-dependent diffuse-loss model.
 
 [K], Eqs. 3, 7, 9, and 11 include **diffuse scattering in addition to capture**. If the imaginary optical potential includes several removal processes, layer current loss L_j is their sum. Capture in component C must then use [K], Eq. 21:
 
-```math
- P_{a,C,j}=L_j\frac{\Sigma_{a,C}}{\Sigma_a+\Sigma_d}.
-```
+$$
+P_{a,C,j}=L_j\frac{\Sigma_{a,C}}{\Sigma_a+\Sigma_d}.
+$$
 
 A capture SLD must not be confused with an incoherent SLD returned by a materials library. In the present model `R+T+sum(P_j)=1`. With additional losses, the corresponding diffuse terms must be added. Also distinguish probability per incident neutron from probability conditional on not being reflected, `P_capture/(1-R)` ([K], §5). The notebooks calculate the former.
 
@@ -195,13 +203,26 @@ A capture SLD must not be confused with an incoherent SLD returned by a material
 
 For the opposite-boundary amplitudes, write k=a+ib with b>=0. Direct integration gives
 
-```math
- I_j=(|A|^2+|B|^2)\frac{1-e^{-2bd}}{2b}
-       +2\operatorname{Re}(AB^*)e^{-bd}\,d\,
-             \operatorname{sinc}(ad/\pi),
-```
+$$
+I_j=(|A|^2+|B|^2)\frac{1-e^{-2bd}}{2b}
++2\mathrm{Re}(AB^*)e^{-bd}\,d\,
+\mathrm{sinc}(ad/\pi).
+$$
 
-where `sinc(x)=sin(pi*x)/(pi*x)`, and the first quotient tends to d at b=0. The cross term follows from integrating `exp(i*a*(2*x-d))`; its imaginary odd part cancels. The factors in `integrate_layers_analytic` are correct, including `torch.sinc(k.real*d/pi)`. `expm1` avoids subtracting almost equal numbers when absorption is small.
+Here the normalized sinc function is
+
+$$
+\mathrm{sinc}(x)=\frac{\sin(\pi x)}{\pi x},
+\qquad \mathrm{sinc}(0)=1,
+$$
+
+and the first quotient tends to d at b=0:
+
+$$
+\lim_{b\to 0}\frac{1-e^{-2bd}}{2b}=d.
+$$
+
+The cross term follows from integrating `exp(i*a*(2*x-d))`; its imaginary odd part cancels. The factors in `integrate_layers_analytic` are correct, including `torch.sinc(k.real*d/pi)`. `expm1` avoids subtracting almost equal numbers when absorption is small.
 
 **This closed-form integral is a derivation from the wave field and [A]'s density-integral prescription, not a numbered formula reproduced verbatim from either paper.** The notebooks' trapezoidal integration interpolates field values at layer boundaries, which fixes missing boundary segments but cannot recover unresolved oscillations in a coarse map. The analytic integral is the appropriate primary absorption calculation.
 
