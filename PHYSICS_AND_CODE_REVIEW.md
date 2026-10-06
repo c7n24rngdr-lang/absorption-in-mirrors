@@ -144,8 +144,9 @@ Replace `\operatorname{...}` with `\mathrm{...}`. Here are both corrected sectio
 The unambiguous starting point is the normal probability current:
 
 $$
-J_z=\frac{\hbar}{2i m_n}\left(\psi^*\psi'-\psi(\psi')^*\right)
-=\frac{\hbar}{m_n}\mathrm{Im}\left(\psi^*\psi'\right).
+J_z=\frac{\hbar}{2i m_n}
+\left(\psi^{*}\psi'-\psi(\psi')^{*}\right)
+=\frac{\hbar}{m_n}\mathrm{Im}\left(\psi^{*}\psi'\right).
 $$
 
 For unit incident amplitude in a nonabsorbing incident medium,
